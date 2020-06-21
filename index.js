@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 //const mongoose = require('mongoose');
-const mysql = require('mysql');
+//const mysql = require('mysql');
 require('dotenv').config();
 
 const app = express();
@@ -17,21 +17,21 @@ app.use(function (req, res, next) {
 });
 
 //mysql://bfe487f9ef0896:11af1766@us-cdbr-east-05.cleardb.net/heroku_1ae353faf98da68?reconnect=true
-const con = mysql.createConnection({
-        host: 'us-cdbr-east-05.cleardb.net',
-        user: process.env.MYSQLUSER || 'bfe487f9ef0896',
-        password: process.env.MYSQLPASS || '11af1766',
-        database: 'heroku_1ae353faf98da68'
-    });
+//const con = mysql.createConnection({
+//        host: 'us-cdbr-east-05.cleardb.net',
+//        user: process.env.MYSQLUSER || 'bfe487f9ef0896',
+//        password: process.env.MYSQLPASS || '11af1766',
+//        database: 'heroku_1ae353faf98da68'
+//    });
 
-    con.connect((err) => {
-        if (err) {
-            console.log('Error in connection' + err);
-            return;
-        } else {
-            console.log('Connection established');     
-        }
-    });
+//    con.connect((err) => {
+//        if (err) {
+//            console.log('Error in connection' + err);
+//            return;
+//        } else {
+//            console.log('Connection established');     
+//        }
+//    });
 
 
 const loginRouter = require('./routes/login');
