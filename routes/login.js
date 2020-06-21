@@ -7,7 +7,8 @@ const jwt = require('jsonwebtoken');
 const mysql = require('mysql');
 
 router.route('/').post((req, res) => {
-    debugger;
+    res.json({message: 'success'});
+    //debugger;
     // Register.findOne(
     //     { email: req.body.email }
     // ).then(user => {
@@ -51,12 +52,12 @@ router.route('/').post((req, res) => {
 
      //mysql login
     //connect mysql
-    const con = mysql.createConnection({
-        host: 'localhost',
-        user: process.env.MYSQLUSER || 'newuser',
-        password: process.env.MYSQLPASS || 'Welcome@123',
-        database: 'mydb'
-    });
+//    const con = mysql.createConnection({
+//        host: 'localhost',
+//        user: process.env.MYSQLUSER || 'newuser',
+//        password: process.env.MYSQLPASS || 'Welcome@123',
+//        database: 'mydb'
+//    });
 //    const con = mysql.createConnection({
 //        host: 'us-cdbr-east-05.cleardb.net',
 //        user: process.env.MYSQLUSER || 'bfe487f9ef0896',
@@ -64,28 +65,28 @@ router.route('/').post((req, res) => {
 //        database: 'heroku_1ae353faf98da68'
 //    });
 
-    con.connect((err) => {
-        if (err) {
-            console.log('Error in connection' + err);
-            return;
-        } else {
-            console.log('Connection established');     
-            var mail = req.body.email;
-            var pass = req.body.password;
-            debugger;
-            if(mail && pass){
-                var sql = "SELECT * FROM mydb.users_list WHERE email = ? AND password = ?";
-                con.query(sql,[mail, pass], (err, result) => {
-                    if (err) return next(err);
-                    if(result.length > 0){
-                        res.send(result);
-                    }
-                });
-            } else {                
-                res.send('please enter valid email & password');
-            }     
-        }
-    });
+//    con.connect((err) => {
+//        if (err) {
+//            console.log('Error in connection' + err);
+//            return;
+//        } else {
+//            console.log('Connection established');     
+//            var mail = req.body.email;
+//            var pass = req.body.password;
+//            debugger;
+//            if(mail && pass){
+//                var sql = "SELECT * FROM mydb.users_list WHERE email = ? AND password = ?";
+//                con.query(sql,[mail, pass], (err, result) => {
+//                    if (err) return next(err);
+//                    if(result.length > 0){
+//                        res.send(result);
+//                    }
+//                });
+ //           } else {                
+ //               res.send('please enter valid email & password');
+ //           }     
+   //     }
+  //  });
 });
 
 module.exports = router;
