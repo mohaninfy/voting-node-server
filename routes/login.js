@@ -86,8 +86,8 @@ router.route('/').post((req, res) => {
  //           } else {                
  //               res.send('please enter valid email & password');
  //           }     
-     }
-  });
+ //    }
+//  });
 });
 
 module.exports = router;
