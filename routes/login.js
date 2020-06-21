@@ -51,18 +51,18 @@ router.route('/').post((req, res) => {
 
      //mysql login
     //connect mysql
-//    const con = mysql.createConnection({
-//        host: 'localhost',
-//        user: process.env.MYSQLUSER || 'newuser',
-//        password: process.env.MYSQLPASS || 'Welcome@123',
-//        database: 'mydb'
-//    });
     const con = mysql.createConnection({
-        host: 'us-cdbr-east-05.cleardb.net',
-        user: process.env.MYSQLUSER || 'bfe487f9ef0896',
-        password: process.env.MYSQLPASS || '11af1766',
-        database: 'heroku_1ae353faf98da68'
+        host: 'localhost',
+        user: process.env.MYSQLUSER || 'newuser',
+        password: process.env.MYSQLPASS || 'Welcome@123',
+        database: 'mydb'
     });
+//    const con = mysql.createConnection({
+//        host: 'us-cdbr-east-05.cleardb.net',
+//        user: process.env.MYSQLUSER || 'bfe487f9ef0896',
+//        password: process.env.MYSQLPASS || '11af1766',
+//        database: 'heroku_1ae353faf98da68'
+//    });
 
     con.connect((err) => {
         if (err) {
