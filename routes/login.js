@@ -58,19 +58,20 @@ router.route('/').post((req, res) => {
 //        password: process.env.MYSQLPASS || 'Welcome@123',
 //        database: 'mydb'
 //    });
-//    const con = mysql.createConnection({
-//        host: 'us-cdbr-east-05.cleardb.net',
-//        user: process.env.MYSQLUSER || 'bfe487f9ef0896',
-//        password: process.env.MYSQLPASS || '11af1766',
-//        database: 'heroku_1ae353faf98da68'
-//    });
+   const con = mysql.createConnection({
+            host: 'sq65ur5a5bj7flas.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+            user: 'fhtfsbs1q1efzc62', // point out to the DB which you are using
+            password: 'xd18plxanqxa9s2r', // provide the password for the same
+            database: 'i5c00w4odaxjc5lk',
+            port: '3306'
+    });    
 
-//    con.connect((err) => {
-//        if (err) {
-//            console.log('Error in connection' + err);
-//            return;
-//        } else {
-//            console.log('Connection established');     
+    con.connect((err) => {
+      if (err) {
+           console.log('Error in connection' + err);
+            return;
+        } else {
+           console.log('Connection established');     
 //            var mail = req.body.email;
 //            var pass = req.body.password;
 //            debugger;
@@ -85,8 +86,8 @@ router.route('/').post((req, res) => {
  //           } else {                
  //               res.send('please enter valid email & password');
  //           }     
-   //     }
-  //  });
+     }
+  });
 });
 
 module.exports = router;
