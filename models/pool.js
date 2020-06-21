@@ -1,9 +1,10 @@
 var mysql = require('mysql2/promise');
+mysql://b0ce3d4f8a73b8:184d2439@us-cdbr-east-05.cleardb.net/heroku_610a5e0c423687d?reconnect=true
 const mysqlConfig = {
-    host: 'sq65ur5a5bj7flas.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-    user: 'fhtfsbs1q1efzc62', // point out to the DB which you are using
-    password: 'xd18plxanqxa9s2r', // provide the password for the same
-    database: 'i5c00w4odaxjc5lk',
+    host: 'us-cdbr-east-05.cleardb.net',
+    user: 'b0ce3d4f8a73b8', // point out to the DB which you are using
+    password: '184d2439', // provide the password for the same
+    database: 'heroku_610a5e0c423687d',
     port: '3306'
 }
 
