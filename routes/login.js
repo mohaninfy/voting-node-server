@@ -4,7 +4,7 @@ let Register = require('../models/register.model');
 //const jwt = require('jsonwebtoken');
 
 //using mysql
-const mysql = require('mysql');
+//const mysql = require('mysql');
 
 router.route('/').post((req, res) => {
     res.json({message: 'success'});
