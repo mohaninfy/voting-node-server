@@ -1,7 +1,7 @@
 const router = require('express').Router();
 let Register = require('../models/register.model');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+//const bcrypt = require('bcrypt');
+//const jwt = require('jsonwebtoken');
 
 //using mysql
 const mysql = require('mysql');
