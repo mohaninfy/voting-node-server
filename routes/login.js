@@ -7,7 +7,7 @@ let Register = require('../models/register.model');
 //const mysql = require('mysql');
 
 router.route('/').post((req, res) => {
-    res.json({message: 'success'});
+    //res.json({message: 'success'});
     //debugger;
     // Register.findOne(
     //     { email: req.body.email }
