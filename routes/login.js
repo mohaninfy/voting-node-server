@@ -71,20 +71,20 @@ router.route('/').post((req, res) => {
             return;
 } else {
            console.log('Connection established');     
-//            var mail = req.body.email;
-//            var pass = req.body.password;
-//            debugger;
-//            if(mail && pass){
-//                var sql = "SELECT * FROM heroku_610a5e0c423687d.users_list WHERE email = ? AND password = ?";
-//                con.query(sql,[mail, pass], (err, result) => {
-//                    if (err) return next(err);
-//                    if(result.length > 0){
-//                        res.send(result);
-//                    }
-//                });
- //           } else {                
- //               res.send('please enter valid email & password');
- //           }     
+           var mail = req.body.email;
+            var pass = req.body.password;
+            debugger;
+            if(mail && pass){
+                var sql = "SELECT * FROM heroku_610a5e0c423687d.users_list WHERE email = ? AND password = ?";
+                con.query(sql,[mail, pass], (err, result) => {
+                    if (err) return next(err);
+                    if(result.length > 0){
+                        res.send(result);
+                    }
+                });
+           } else {                
+               res.send('please enter valid email & password');
+           }   
    }
   });
 });
