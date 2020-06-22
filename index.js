@@ -46,7 +46,7 @@ app.use(function(req, res, next) {
 
 
 const loginRouter = require('./routes/login');
-app.use('/login/', loginRouter);
+app.use('/', loginRouter);
 //app.post('/login/', (req, res) => res.send('Working!!!'));
 
 cors_proxy.createServer({
