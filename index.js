@@ -45,9 +45,9 @@ app.use(function(req, res, next) {
 //    });
 
 
-const loginRouter = require('./routes/login');
-app.use('/login', loginRouter);
-
+//const loginRouter = require('./routes/login');
+//app.use('/login', loginRouter);
+app.get('/', (req, res) => res.send('Working!!!'));
 
 cors_proxy.createServer({
     originWhitelist: [], // Allow all origins
