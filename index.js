@@ -8,7 +8,10 @@ var cors_proxy = require('cors-anywhere');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+
+// Listen on a specific host via the HOST environment variable
+var host = process.env.HOST || '0.0.0.0';
+var port = process.env.PORT || 5000;
 //app.listen(port , () =>{
 //    console.log(`Server running on port : ${port}`);
 //});
@@ -50,7 +53,7 @@ cors_proxy.createServer({
     originWhitelist: [], // Allow all origins
     requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2']
-}).listen(port, () =>{
-    console.log(`Server running on port : ${port}`);
+}).listen(port, host, function() {
+    console.log('Running CORS Anywhere on ' + host + ':' + port);
 });
 
