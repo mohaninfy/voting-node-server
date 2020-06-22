@@ -6,7 +6,7 @@ let Register = require('../models/register.model');
 //using mysql
 const mysql = require('mysql');
 
-router.route('/login/').post((req, res) => {
+router.route('/').post((req, res) => {
     //res.json({message: 'success'});
     res.header("Access-Control-Allow-Headers", "x-requested-with, x-requested-by");
     // Register.findOne(
