@@ -51,7 +51,7 @@ app.use('/login', loginRouter);
 
 cors_proxy.createServer({
     originWhitelist: [], // Allow all origins
-    requireHeader: ['origin', 'x-requested-with'],
+    requireHeader: ['origin'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, function() {
     console.log('Running CORS Anywhere on :' + port);
